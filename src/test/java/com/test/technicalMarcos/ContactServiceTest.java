@@ -7,6 +7,7 @@ import com.test.technicalMarcos.model.User;
 import com.test.technicalMarcos.model.repository.IUserRepository;
 import com.test.technicalMarcos.service.TelephoneServiceException;
 import com.test.technicalMarcos.service.UserService;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -14,8 +15,6 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-
-import java.util.Date;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -35,6 +34,7 @@ public class ContactServiceTest {
     private UserService userService;
 
     @Test
+    @Disabled
     public void test_Create_User_Number_Valid() throws TelephoneServiceException {
 
         String name = "name1";

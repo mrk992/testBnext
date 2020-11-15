@@ -1,0 +1,13 @@
+version: "3"
+services:
+  api-database:
+    image: mongo:latest
+    container_name: "api-database"
+    ports:
+      - 27017:27017
+  api:
+    image: mrk992/marcostest:v1
+    ports:
+      - 9091:8080
+    links:
+      - api-database
